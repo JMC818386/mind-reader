@@ -1,0 +1,13 @@
+.headerElement {
+    margin-top: 100px;
+}
+
+.middleBtn {
+    padding: 20px;
+    margin: 0px 100px 0px 100px;
+}
+
+.bottomBtn {
+    margin-bottom: 100px;
+    padding: 20px;
+}
