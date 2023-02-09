@@ -47,20 +47,136 @@ REVEAL button (button)
     - & (p)
     - RESET button (button)
 
-## Pseudo
-- Natural language 
+## Pseudo Code
+- On page load (State 1):
+    - Display state 1 h1 element
+    - Display go button
+- User:
+    - Clicks go button to progress to state 2
+
+- State 2:
+	- Display state 2 h1 element
+	- Display state 2 NEXT button
+	- Display state 2 p element
+	- Display RESET button
+- User:
+	- Clicks NEXT button to progress to state 3
+	- Clicks RESET button to return to state1
+
+- State 3:
+	- Display state 3 h1 element
+	- Display state 3 NEXT button
+	- Display state 3 p element1
+    - Display state 3 p element2
+	- Display RESET button
+- User:
+	- Clicks NEXT button to progress to state 4
+	- Clicks RESET button to return to state1
+
+- State 4:
+	- Display state 4 h1 element
+	- Display state 4 NEXT button
+	- Display state 4 p element1
+    - Display state 4 p element2
+	- Display RESET button
+- User:
+	- Clicks NEXT button to progress to state 5
+	- Clicks RESET button to return to state1
+
+
+- State 5:
+	- Display state 5 h1 element
+	- Display state 5 REVEAL button
+	- Display state 5 p element1
+    - Display state 5 p element2
+	- Display RESET button
+- User:
+	- Clicks NEXT button to progress to state 6
+	- Clicks RESET button to return to state1
+
+- State 6:
+	- Display state 6 h1 element
+	- Display state 6 p element1
+    - Display state 6 p element2
+	- Display RESET button
+- User:
+	- Clicks RESET button to return to state1
+	
+	
+
 
 ## Procedural
-//START PROGRAM
-START
-INIT
-END
-//END PROGRAM
+//Start Program
+
+        START
+
+        INIT
+
+        DISPLAY state 1 page
+
+        INPUT user clicks go button
+        IF user clicks go button
+            THEN DISPLAY state 2 page
+
+        INPUT user clicks next button
+        IF user clicks next button 
+        THEN DISPLAY state 3 page
+        END IF
+
+        INPUT user clicks reset button
+        IF user clicks reset button
+            THEN DISPLAY state 1 page
+        ENDIF
+
+        INPUT user clicks next button
+        IF user clicks next button 
+        THEN DISPLAY state 4 page
+        END IF
+
+        INPUT user clicks reset button
+        IF user clicks reset button
+            THEN DISPLAY state 1 page
+        ENDIF
+
+        INPUT user clicks next button
+        IF user clicks next button 
+        THEN DISPLAY state 5 page
+        END IF
+
+        INPUT user clicks reset button
+        IF user clicks reset button
+            THEN DISPLAY state 1 page
+        ENDIF
+
+        INPUT user clicks reveal button
+        IF user clicks reveal button 
+        THEN DISPLAY state 6 page
+        END IF
+
+        INPUT user clicks reset button
+        IF user clicks reset button
+            THEN DISPLAY state 1 page
+        ENDIF
+
+    END
+
+//End Program
+
 
 ## Functional
-- Functions
+- loadState
+- stateOne
+- stateTwo
+- stateThree
+- stateFour
+- stateFive
+- stateSix
 
 ## Object Oriented
-- Objects
-
-
+- headerElement
+- pElementOne
+- pElementTwo
+- goBtn
+- nextBtn
+- revealBtn
+- resetBtn
