@@ -145,11 +145,9 @@ function init() {
     //update bottom button
     bottomBtn.innerText = sixthPage.bottomBtn
 }
-
 init()
-console.log(secondPage)
 
 
 //Create eventListener for middle button that renders elements to page based on current page state
 
-////Create eventListener for bottom button that renders elements to page based on current page state
+//Create eventListener for bottom button that renders elements to page based on current page state
