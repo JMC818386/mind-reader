@@ -12,7 +12,7 @@ let bottomBtn = document.getElementById("bottomBtn");
 
 //Create object containing arrays holding key value pairs for each state
 let state = {
-    currentPage: 0,
+    page: 0,
     pageState: [
         {//state 1 (currentPage 0)
             headerElement: "I can read your mind",
@@ -66,21 +66,38 @@ let state = {
 
 function init() {
     //grab FIRST page from state (currentPage 0)
-    let firstPage = state.pageState[state.currentPage]
-    console.log(firstPage)
-    console.log(state.currentPage)
+    let currentPage = state.pageState[state.page]
+/*     console.log(currentPage)
+    console.log(state.currentPage) */
     //update header element 
-    headerElement.innerText = firstPage.headerElement
+    headerElement.innerText = currentPage.headerElement
     //hide middle button
-    middleBtn.style.display = "none";
-    //hide p element 1
-    pElementOne.style.display = "none";
-    //hide p element 2
-    pElementTwo.style.display = "none";
-    //update bottom button
-    bottomBtn.innerText = firstPage.bottomBtn
+    if (currentPage.middleBtn) {
+        middleBtn.style.display = "block";
+    } else {
+        middleBtn.style.display = "none";
+    }
 
-    //grab SECOND page from state (currentPage 1)
+    //hide p element 1
+    if (currentPage.pElementOne) {
+        pElementOne.style.display = "block";
+    } else {
+        pElementOne.style.display = "none";
+    }
+
+    //hide p element 2
+    if (currentPage.pElementTwo) {
+        pElementTwo.style.display = "block";
+    } else {
+        pElementTwo.style.display = "none";
+    }
+
+    //update bottom button
+    bottomBtn.innerText = currentPage.bottomBtn
+    middleBtn.innerText = currentPage.middleBtn
+}
+
+  /*   //grab SECOND page from state (currentPage 1)
     let secondPage = state.pageState[state.currentPage]
     //update header element
     headerElement.innerText = secondPage.headerElement
@@ -144,15 +161,30 @@ function init() {
     pElementOne.innerText = sixthPage.pElementOne
     //update bottom button
     bottomBtn.innerText = sixthPage.bottomBtn
-}
+} */
 init()
 
 let symbols = ['!', '@', '#', '$', '%', '^', '$', '*', '(']
 let arr = []
-for (let i = 0; i < 100; i++); {
+for (let i = 0; i < 100; i++) {
     arr.push(i + " " + symbols[i % 9]);
 }
     console.log(arr)
+
+function nextPage() {
+    if (state.page < 5) {
+        state.page++;
+    } else {
+        state.page = 0;
+    }
+    init()
+}
+
+document.getElementById("middleBtn").addEventListener("click", nextPage);
+
+document.getElementById("bottomBtn").addEventListener("click", nextPage);
+
+
 
 
 //Create eventListener targetting middleBtn - onclick should increment currentPage by 1 and render next pageState in state array
