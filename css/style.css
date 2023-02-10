@@ -26,11 +26,17 @@
 }
 
 #pElementOne {
+    display: flex;
+    align-items: center;
     font-size: 25px;
+    padding: 15px;
 }
 
 #pElementTwo {
+    display: flex;
+    align-items: center;
     font-size: 20px;
+    padding: 15px;
 }
 #bottomBtn {
     margin: 10px 10px 20px 10px;

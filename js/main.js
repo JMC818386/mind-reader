@@ -1,4 +1,4 @@
-//Initiaize variables that call HTML elements to page
+//Declare variables that call HTML elements to page
 //Delcare header element
 let headerElement = document.getElementById("headerElement");
 //Declare middle button element
@@ -34,7 +34,7 @@ let state = {
             headerElement: "Add both digits together to get a new number",
             middleBtn: "NEXT",
             pElementOne: "Ex: 14 is 1 + 4 = 5",
-            pElementTwo: "click to proceed",
+            pElementTwo: "click next to proceed",
             bottomBtn: "RESET"
         },
 
@@ -42,7 +42,7 @@ let state = {
             headerElement: "Subtract your new number from the original number",
             middleBtn: "NEXT",
             pElementOne: "Ex: 14 - 5 = 9",
-            pElementTwo: "click to proceed",
+            pElementTwo: "click next to proceed",
             bottomBtn: "RESET"
         },
 
@@ -58,7 +58,7 @@ let state = {
             headerElement:"&",
             middleBtn: "",
             pElementOne: "Your symbol is:",
-            pElementTwo: "",
+            pElementTwo: "&",
             bottomBtn: "RESET"
         },
     ]
@@ -147,7 +147,14 @@ function init() {
 }
 init()
 
+let symbols = ['!', '@', '#', '$', '%', '^', '$', '*', '(']
+let arr = []
+for (let i = 0; i < 100; i++); {
+    arr.push(i + " " + symbols[i % 9]);
+}
+    console.log(arr)
 
-//Create eventListener for middle button that renders elements to page based on current page state
 
-//Create eventListener for bottom button that renders elements to page based on current page state
+//Create eventListener targetting middleBtn - onclick should increment currentPage by 1 and render next pageState in state array
+
+//Create eventListener targetting middleBtn - onclick should load state 1 (currentPage 0)
