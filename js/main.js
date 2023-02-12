@@ -79,6 +79,7 @@ function init() {
         middleBtn.style.display = "none";
     }
 
+    pElementOne.innerText = currentPage.pElementOne
     //hide p element 1
     if (currentPage.pElementOne) {
         pElementOne.style.display = "block";
@@ -86,6 +87,7 @@ function init() {
         pElementOne.style.display = "none";
     }
 
+    pElementTwo.innerText = currentPage.pElementTwo
     //hide p element 2
     if (currentPage.pElementTwo) {
         pElementTwo.style.display = "block";
@@ -173,7 +175,7 @@ for (let i = 0; i < 100; i++) {
     console.log(arr)
 
 
-//Function that calls nextPage is current state is less than 5
+//Function that calls nextPage if current state is less than 5 (any page before first index in array)
 function nextPage() {
     if (state.page < 5) {
         state.page++;
@@ -181,6 +183,7 @@ function nextPage() {
     init()
 }
 
+//Function that calls resetPage if current state is more than 0 (any page after first index in array)
 function resetPage() {
     if (state.page > 0) {
         state.page = 0;
