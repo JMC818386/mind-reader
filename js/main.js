@@ -71,6 +71,7 @@ function init() {
     console.log(state.currentPage) */
     //update header element 
     headerElement.innerText = currentPage.headerElement
+    
     //hide middle button
     if (currentPage.middleBtn) {
         middleBtn.style.display = "block";
