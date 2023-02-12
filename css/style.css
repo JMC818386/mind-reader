@@ -1,3 +1,15 @@
+body {
+background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(7,11,95,1) 87%, rgba(9,16,121,1) 100%);
+}
+
+.row {
+    background-color: #003d99;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    opacity: .5;
+}
+
 .headerContainer {
     display: flex;
     align-items: center;
@@ -6,8 +18,11 @@
 }
 
 #headerElement {
-    font-size: 50px;
-    color: grey;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    margin: auto;
+    color: white;
 }
 
 .middleBtnContainer {
@@ -21,8 +36,10 @@
 
 #middleBtn {
     padding: 20px 70px 20px 70px;
-    font-size: 25px;
-    border: solid;
+    font-size: 40px;
+    color: #003d99;
+    border: none;
+    background-color: white;
 }
 
 #pElementOne {
@@ -43,6 +60,7 @@
     padding: 20px;
     border-radius: 50px;
     font-size: 30px;
-    border: solid;
-    color: black;
+    color: #003d99;
+    border: none;
+    background-color: white;
 }

@@ -91,7 +91,7 @@ function init() {
     } else {
         pElementTwo.style.display = "none";
     }
-
+    
     //update bottom button
     bottomBtn.innerText = currentPage.bottomBtn
     middleBtn.innerText = currentPage.middleBtn
@@ -171,18 +171,27 @@ for (let i = 0; i < 100; i++) {
 }
     console.log(arr)
 
+
+//Function that calls nextPage is current state is less than 5
 function nextPage() {
     if (state.page < 5) {
         state.page++;
-    } else {
+    }
+    init()
+}
+
+function resetPage() {
+    if (state.page > 0) {
         state.page = 0;
+    } else {
+        state.page++;
     }
     init()
 }
 
 document.getElementById("middleBtn").addEventListener("click", nextPage);
 
-document.getElementById("bottomBtn").addEventListener("click", nextPage);
+document.getElementById("bottomBtn").addEventListener("click", resetPage);
 
 
 
